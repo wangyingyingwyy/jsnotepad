@@ -10,13 +10,6 @@ module.exports=function (grunt) {
               dest:'dist/index.html'
           }
       },
-      imagemin: {
-        files: {
-          expand: true,
-          src: ['./images/*.png'],
-          dest: 'dist/'
-        }
-      },
       concat: {
         js: {
           src: ['js/*.js', './com/**/*.js'],
@@ -45,12 +38,11 @@ module.exports=function (grunt) {
     
   });
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-usemin');
-  grunt.registerTask('default', ['copy:html','concat', 'uglify', 'cssmin','usemin', 'htmlmin', 'imagemin']);
+  grunt.registerTask('default', ['copy:html','concat', 'uglify', 'cssmin','usemin', 'htmlmin']);
   // grunt.registerTask('default', ['concat','uglify',  'cssmin']);
 }
