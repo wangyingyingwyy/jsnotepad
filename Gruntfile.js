@@ -44,5 +44,4 @@ module.exports=function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-usemin');
   grunt.registerTask('default', ['copy:html','concat', 'uglify', 'cssmin','usemin', 'htmlmin']);
-  // grunt.registerTask('default', ['concat','uglify',  'cssmin']);
 }
